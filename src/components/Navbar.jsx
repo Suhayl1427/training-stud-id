@@ -1,10 +1,9 @@
+// Simple, reusable top navigation bar that displays the college name.
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <h1>This is the main heading of the page</h1>
-      </div>
-    </nav>
+    <header className="navbar">
+      <h1 className="navbar__title">MSAJCE COLLEGE</h1>
+    </header>
   );
 }
 
