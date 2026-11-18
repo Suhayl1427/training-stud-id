@@ -1,3 +1,9 @@
+/* Plain-text navbar links, centered horizontally */
+.navbar-links {
+  text-align: center;
+  padding: 8px 0;
+}
+
 /* ============================================================
    Navbar
    ============================================================ */
