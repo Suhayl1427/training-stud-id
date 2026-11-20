@@ -1,26 +1,49 @@
-/* Plain-text navbar links, centered horizontally */
-.navbar-links {
-  text-align: center;
-  padding: 8px 0;
-}
-
 /* ============================================================
-   Navbar
+   Page Layout & Sections
    ============================================================ */
-.navbar {
+.page {
   width: 100%;
-  padding: 20px 24px;
-  text-align: center;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border-light);
+  min-height: calc(100vh - 70px);
 }
 
-.navbar__title {
-  margin: 0;
-  font-size: 22px;
+.hero {
+  text-align: center;
+  padding: 48px 24px 32px;
+  background: linear-gradient(180deg, rgba(241, 245, 249, 0.6) 0%, rgba(245, 246, 247, 0) 100%);
+}
+
+.page__heading {
+  margin: 0 0 10px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--text-heading);
+  color: #0f172a;
+  letter-spacing: -0.025em;
+}
+
+.page__lead {
+  margin: 0 auto;
+  max-width: 540px;
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 24px;
+  padding: 10px 20px;
+  background: #0f172a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.button-link:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
 }
 
 /* ============================================================
@@ -28,17 +51,18 @@
    ============================================================ */
 .gallery {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 40px 24px 56px;
+  padding: 16px 24px 64px;
 }
 
 .gallery__heading {
-  margin: 0 0 32px;
-  font-size: 28px;
+  margin: 0 0 28px;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
-  color: var(--text-heading);
+  color: #0f172a;
+  letter-spacing: -0.015em;
 }
 
 /* Desktop: 3 cards per row */
@@ -58,41 +82,42 @@
   text-align: center;
   width: 100%;
   min-height: 320px;
-  padding: 24px 20px 28px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  padding: 28px 20px 28px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  border-color: var(--text-heading);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
 }
 
 .card__college {
   margin: 0;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--text-heading);
+  color: #0f172a;
 }
 
 .card__avatar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 96px;
-  height: 96px;
+  width: 90px;
+  height: 90px;
   margin: 20px 0 16px;
   overflow: hidden;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
-  color: #6b7280;
-  background: var(--avatar-bg);
-  border: 1px solid var(--avatar-border);
+  color: #475569;
+  background: #f1f5f9;
+  border: 2px solid #e2e8f0;
   border-radius: 50%;
 }
 
@@ -104,9 +129,9 @@
 
 .card__title {
   margin: 0 0 16px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  color: var(--text-heading);
+  color: #334155;
 }
 
 .card__details {
@@ -115,14 +140,14 @@
   gap: 8px;
   margin: 0;
   padding: 0;
-  font-size: 15px;
-  color: var(--text);
+  font-size: 14px;
+  color: #64748b;
   list-style: none;
 }
 
 .card__label {
   font-weight: 600;
-  color: var(--text-heading);
+  color: #1e293b;
 }
 
 /* ============================================================
@@ -138,17 +163,25 @@
 
 /* Mobile: 1 card per row */
 @media (max-width: 640px) {
+  .hero {
+    padding: 32px 16px 20px;
+  }
+
+  .page__heading {
+    font-size: 1.6rem;
+  }
+
   .gallery {
-    padding: 28px 16px 40px;
+    padding: 20px 16px 40px;
   }
 
   .gallery__heading {
-    font-size: 22px;
-    margin-bottom: 24px;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
   }
 
   .card-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+    gap: 16px;
   }
 }
