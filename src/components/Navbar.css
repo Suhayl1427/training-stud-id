@@ -1,7 +1,5 @@
 /* ============================================================
-   Navbar Component Styles
-   Modern sticky navigation bar with glassmorphism, responsive drawer,
-   active indicator states, and micro-interactions.
+   Navbar Component Styles (Simple & Clean)
    ============================================================ */
 
 .site-header {
@@ -9,12 +7,8 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
-  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar-container {
@@ -24,200 +18,75 @@
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 16px 24px;
 }
 
 /* ------------------------------------------------------------
-   Brand / Logo
+   Brand
    ------------------------------------------------------------ */
 .navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   text-decoration: none;
-  color: inherit;
+  color: #111827;
   user-select: none;
 }
 
-.brand-icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.18);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.navbar-brand:hover .brand-icon-wrapper {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.25);
-}
-
-.brand-icon {
-  width: 22px;
-  height: 22px;
-}
-
-.brand-text {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .brand-title {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #0f172a;
-}
-
-.brand-badge {
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 9999px;
-  background: #f1f5f9;
-  color: #475569;
-  border: 1px solid #e2e8f0;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.01em;
+  color: #111827;
 }
 
 /* ------------------------------------------------------------
-   Desktop Navigation Links
+   Desktop Nav
    ------------------------------------------------------------ */
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: #f8fafc;
-  padding: 4px 6px;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  gap: 8px;
 }
 
 .nav-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 14px;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
   font-weight: 500;
-  color: #64748b;
+  color: #4b5563;
   text-decoration: none;
-  transition: all 0.18s ease-in-out;
-}
-
-.nav-icon {
-  width: 17px;
-  height: 17px;
-  opacity: 0.8;
-  transition: opacity 0.18s ease, transform 0.18s ease;
+  transition: all 0.15s ease;
 }
 
 .nav-link:hover {
-  color: #0f172a;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.nav-link:hover .nav-icon {
-  opacity: 1;
-  transform: translateY(-0.5px);
+  color: #111827;
+  background: #f3f4f6;
 }
 
 .nav-link--active {
-  color: #ffffff !important;
-  background: #0f172a !important;
+  color: #111827 !important;
+  background: #f3f4f6 !important;
   font-weight: 600;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
-}
-
-.nav-link--active .nav-icon {
-  opacity: 1;
 }
 
 /* ------------------------------------------------------------
-   Actions / Status & Mobile Toggle
+   Mobile Toggle
    ------------------------------------------------------------ */
-.navbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: #065f46;
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  border-radius: 9999px;
-  user-select: none;
-}
-
-.status-dot {
-  position: relative;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #10b981;
-}
-
-.status-dot::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 50%;
-  background: #10b981;
-  opacity: 0.4;
-  animation: pulse 2s infinite ease-out;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.9);
-    opacity: 0.6;
-  }
-  70% {
-    transform: scale(2.2);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(2.2);
-    opacity: 0;
-  }
-}
-
 .mobile-toggle {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   padding: 0;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  color: #334155;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  color: #374151;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .mobile-toggle:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: #f9fafb;
 }
 
 .mobile-toggle svg {
@@ -226,55 +95,40 @@
 }
 
 /* ------------------------------------------------------------
-   Mobile Drawer Navigation
+   Mobile Drawer
    ------------------------------------------------------------ */
 .mobile-nav {
   display: none;
   flex-direction: column;
-  gap: 6px;
-  padding: 12px 24px 18px;
+  gap: 4px;
+  padding: 12px 24px 16px;
   background: #ffffff;
-  border-top: 1px solid #f1f5f9;
-  animation: slideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  border-top: 1px solid #f3f4f6;
 }
 
 .mobile-nav-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   padding: 10px 14px;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #475569;
+  color: #4b5563;
   text-decoration: none;
   transition: all 0.15s ease;
 }
 
 .mobile-nav-link:hover {
-  background: #f8fafc;
-  color: #0f172a;
+  background: #f3f4f6;
+  color: #111827;
 }
 
 .mobile-nav-link--active {
-  background: #0f172a;
-  color: #ffffff !important;
+  background: #f3f4f6;
+  color: #111827 !important;
   font-weight: 600;
 }
 
 /* ------------------------------------------------------------
-   Responsive Breakpoints
+   Responsive
    ------------------------------------------------------------ */
 @media (max-width: 768px) {
   .desktop-nav {
@@ -287,9 +141,5 @@
 
   .mobile-nav {
     display: flex;
-  }
-
-  .status-pill {
-    display: none;
   }
 }
